@@ -10,7 +10,3 @@ qty:randqty til 100000
 Products:([ID:pid] Name:pname; Model:pmodel; Price:pprice; Quantity:qty)
 
 show Products
-
-show select Name,Price from Products where Price = max Price
-
-show select Name,Price from Products where Price = min Price
