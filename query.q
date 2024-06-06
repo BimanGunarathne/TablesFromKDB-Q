@@ -1,3 +1,4 @@
 \l products.q
+
+cols Products
 show Products
-show select Name,Model,Price,Quantity from Products
