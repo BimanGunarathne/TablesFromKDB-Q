@@ -12,3 +12,5 @@ outdate:100000?.z.d
 Products:([ID:pid] Name:pname; Model:pmodel; Price:pprice; Quantity:qty; Instock:indate; Outstick:outdate)
 
 show Products
+
+show select Name,Model,Price,Quantity from Products where Quantity = min Quantity
