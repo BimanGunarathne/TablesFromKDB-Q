@@ -10,5 +10,3 @@ indate:100000?.z.d
 outdate:100000?.z.d
 
 Products:([ID:pid] Name:pname; Model:pmodel; Price:pprice; Quantity:qty; Instock:indate; Outstick:outdate)
-
-show Products
