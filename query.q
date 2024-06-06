@@ -1,23 +1,43 @@
 \l products.q
 
-cols Products
 show Products
 
-show select Instock,Name,Model,Price,Quantity from Products where Quantity>6
+// Write a kdb+/q query to select the "Name" and "Model" of products where the "Price" is greater than 100000.
 
-show select Instock,Name,Model,Price,Quantity from Products where Instock = min Instock, Quantity>6
+show select Name,Model,Price from Products where Price>100000
 
-\ts show select Instock,Name,Model,Price,Quantity from Products where Instock = min Instock, Quantity>6
+// Write a kdb+/q query to find all products with the "Name" 'APPL' and display their "ID," "Model," and "Quantity".
 
-\ts show select Instock,Name,Model,Price,Quantity from Products where Quantity>6, Instock = min Instock
+show select ID,Name,Model,Quantity from Products where Name = `APPL
 
-\ts show select Instock,Name,Model,Price,Quantity from Products where Quantity>6
+// Write a kdb+/q query to count the number of products for each unique "Name".
 
-show select count i from Products where Instock = min Instock
+show select count i by Name from Products
 
-show select minPrice: min Price, maxPrice:max Price from Products
+// Write a kdb+/q query to find the average "Price" of products where the "Quantity" is less than 10.
 
-show select Name,Price by ID from Products
+show select avgPrice:avg Price, Quantity from Products where Quantity<10 
 
-show select count i by Price from Products
+// Write a kdb+/q query to list all products that have an "Outstock" date before the year 2024.
 
+show select Name,Outstock from Products where Outstock < 2024.01.01
+
+// Write a kdb+/q query to display the "ID," "Name," and "Price" of products that were in stock on or after January 1, 2023.
+
+show select ID,Name,Price,Instock from Products where Instock >= 2023.01.01
+
+// Write a kdb+/q query to find the maximum "Quantity" of products grouped by "Name".
+
+show select max Quantity by Name from Products
+
+// Write a kdb+/q query to list products that have a "Quantity" between 5 and 15, inclusive.
+
+show select Name,Quantity from Products where 5 <= Quantity <= 15 
+
+// Write a kdb+/q query to select the "ID," "Name," and "Model" of products where the "Price" is within the range of 50000 to 100000.
+
+show select ID,Name,Model from Products where 50000 <= Price <= 100000
+
+// Write a kdb+/q query to display the "Name" and "Price" of the top 10 most expensive products.
+
+show select Name,Price from Products where Price > 500000
