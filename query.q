@@ -1,4 +1,5 @@
 \l products.q
+\l customer.q
 
 show Products
 
