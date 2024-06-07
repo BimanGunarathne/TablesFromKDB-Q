@@ -42,3 +42,11 @@ show select ID,Name,Model from Products where 50000 <= Price <= 100000
 // 10. Write a kdb+/q query to display the "Name" and "Price" of the top 10 most expensive products.
 
 show select Name,Price from Products where Price > 500000
+
+// 11. What is the total number of products currently in stock?
+
+show select qty:sum Quantity from Products where not null Instock
+
+// 12. How would you write a query to list all products with a price greater than 300,000?
+
+show select from Products where Price > 300000
