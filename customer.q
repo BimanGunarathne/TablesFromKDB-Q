@@ -6,4 +6,4 @@ cname:names
 pnumber:numbers
 
 customer:([ID:cid] CustomerName:cname;PhoneName:pnumber)
-show customer
+\ts show customer
