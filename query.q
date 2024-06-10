@@ -50,3 +50,7 @@ show select qty:sum Quantity from Products where not null Instock
 // 12. How would you write a query to list all products with a price greater than 300,000?
 
 show select from Products where Price > 300000
+
+// 13. Connelct Customer Table To the Product Table
+
+show select from (Customer lj Products)

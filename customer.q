@@ -5,5 +5,5 @@ cid:1+ til 100000
 cname:names
 pnumber:numbers
 
-customer:([ID:cid] CustomerName:cname;PhoneName:pnumber)
-\ts show customer
+Customer:([ID:cid] CustomerName:cname;PhoneName:pnumber)
+\ts show Customer
