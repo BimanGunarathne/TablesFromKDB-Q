@@ -98,3 +98,11 @@ show Products:delete from Products where ID = 18
 // 24. Update the phone number of a specific customer in the Customer table
 
 show Customer:update PhoneNumber:1234567891 from Customer where ID = 3
+
+// 25. Calculate the average price of products that were in stock for more than 30 days.
+
+show select avg Price from Products where (Outstock - Instock) > 30
+
+// 26. Find the total quantity of products that were sold on weekends.
+
+show select sum Quantity from Products where (SellTime mod 7) in 0 6

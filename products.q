@@ -10,4 +10,4 @@ indate:100000?.z.d
 outdate:100000?.z.d
 selltime:100000?.z.t
 
-Products:([ID:pid] Name:pname; Model:pmodel; Price:pprice; Quantity:qty; Instock:indate; Outstock:outdate; SllTime:selltime)
+Products:([ID:pid] Name:pname; Model:pmodel; Price:pprice; Quantity:qty; Instock:indate; Outstock:outdate; SellTime:selltime)
