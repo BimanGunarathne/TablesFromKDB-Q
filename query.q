@@ -90,3 +90,11 @@ show Products:delete from Products where Outstock = 2023.01.01
 // 22. Update the customer name of a specific customer in the Customer table
 
 show Customer:update CustomerName:`BIMA from Customer where ID = 1
+
+// 23. Delete a specific product by its ID from the Products table
+
+show Products:delete from Products where ID = 18
+
+// 24. Update the phone number of a specific customer in the Customer table
+
+show Customer:update PhoneNumber:1234567891 from Customer where ID = 3
