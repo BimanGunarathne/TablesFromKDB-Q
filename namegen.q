@@ -1,4 +1,4 @@
-alphabet:"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+alphabet:.Q.A;
 nameGen:{
    raze{
     alphabet rand til count alphabet

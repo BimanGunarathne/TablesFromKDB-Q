@@ -54,3 +54,39 @@ show select from Products where Price > 300000
 // 13. Connelct Customer Table To the Product Table
 
 show select from (Customer lj Products)
+
+// 14. What is the maximum price from the products dataset for brands with a price less than the average price for each brand name?
+
+show select avgPrice:Price from Products where ID<(avg;Price) fby Name
+
+// 15. Update the price of a specific product in the Products table
+
+show Products:update Price:45000 from Products where ID = 9
+
+// 16. Update the quantity of a specific product in the Products table
+
+show Products:update Quantity:5 from Products where ID = 9
+
+// 17. Delete a specific customer from the Customer table
+
+show Customer:delete from Customer where ID = 9
+
+// 18. Update the model number of a specific product in the Products table
+
+show Products:update Model:2334 from Products where ID = 11
+
+// 19. Delete products with a specific brand name from the Products table
+
+show Products:delete from Products where Name = `APPL
+
+// 20. Update the in-stock date of a specific product in the Products table
+
+show Products:update Instock:.z.d from Products where ID = 15
+
+// 21. Delete all products that are out of stock from 2023.01.01 in the Products table
+
+show Products:delete from Products where Outstock = 2023.01.01
+
+// 22. Update the customer name of a specific customer in the Customer table
+
+show Customer:update CustomerName:`BIMA from Customer where ID = 1
