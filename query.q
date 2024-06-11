@@ -105,4 +105,32 @@ show select avg Price from Products where (Outstock - Instock) > 30
 
 // 26. Find the total quantity of products that were sold on weekends.
 
-show select sum Quantity from Products where (SellTime mod 7) in 0 6
+show select sum Quantity,Outstock from Products where Outstock = ((Outstock - 0) mod 7)
+
+// 27. Determine the maximum price of a product that was in stock for less than 10 days.
+
+show select max Price from Products where (Outstock - Instock) < 10
+
+// 28. Find the total quantity of products sold within a specific date range (e.g., from 2023.01.01 to 2023.01.31).
+
+show select sum Quantity from Products where Outstock within 2023.01.01 2023.01.31
+
+// 29. Calculate the average number of days products are in stock before they are sold.
+
+show select avg(Outstock - Instock) from Products
+
+// 30. Find the earliest and latest dates when products were stocked.
+
+show select minInstock:min Instock, maxInstock:max Instock from Products
+
+// 31. Determine the average price of products sold each month.
+
+show select avg Price by Outstock.month from Products
+
+// 32. Identify products that were in stock during the entire year of 2023.
+
+show select from Products where Instock >= 2023.01.01, Outstock <= 2023.12.31
+
+// 33. Calculate the difference in days between the earliest and latest selltime for products from the same company (e.g., 'APPL').
+
+show select Erliest:min SellTime, Latest:max SellTime by Name from Products where Name = `APPL
