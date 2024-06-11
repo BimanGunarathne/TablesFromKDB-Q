@@ -1,5 +1,5 @@
-\l products.q
-\l customer.q
+\l AddingDataFeed/products.q
+\l AddingDataFeed/customer.q
 
 show Products
 

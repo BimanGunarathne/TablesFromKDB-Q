@@ -1,5 +1,5 @@
-\l namegen.q
-\l phonegen.q
+\l AddingDataFeed/namegen.q
+\l AddingDataFeed/phonegen.q
 
 cid:1+ til 100000
 cname:names
